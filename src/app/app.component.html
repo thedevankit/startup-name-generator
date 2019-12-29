@@ -1,0 +1,36 @@
+<div id="header">
+  <div class="item"></div>
+  <h1>The Startup Name Generator</h1>
+  <div class="item logo">
+    <img class="logo-img" src="../assets/img/mahawiki.png" alt="">
+  </div>
+</div>
+<div class="container">
+  <div class="row my-5">
+    <div class="col-md-12">
+      <form [formGroup]="regForm">
+        <div class="col-8 offset-2">
+            <input (keyup)="OnKey($event)" type="text" formControlName="keyWords" class="form-control form-card" id="inputtext" placeholder="Enter your key word">
+        </div>
+        <div *ngIf="errormsg" style="color:red; text-align: center; font-size:0.8em; margin:5px ;">
+          Please enter your keyword
+        </div>
+        <div class="col-6  offset-3 my-3">
+          <button type="submit" (click)="onSubmit()" class="btn btn-block button">Generate</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="result-top"  *ngIf="count" >
+    Total number of result {{count}}
+  </div>
+  <div class="row" *ngIf="result">
+    <div class="col-md-4 grid top-Margin" *ngFor="let item of result">
+      <div class="card card2 grow">
+        <div class="card-body ">
+          <h3 class="card-title">{{item}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+<router-outlet></router-outlet>

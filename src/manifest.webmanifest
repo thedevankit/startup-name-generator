@@ -1,0 +1,16 @@
+{
+  "name": "startup Name Generator",
+  "short_name": "SNG by Ankit Singh",
+  "theme_color": "#1976d2",
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "assets/icons/newlogo.jpg",
+      "sizes": "100x100",
+      "type": "image/jpg"
+    }
+  ]
+}
