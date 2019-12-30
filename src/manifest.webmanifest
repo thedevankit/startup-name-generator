@@ -8,9 +8,9 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "assets/icons/newlogo.jpg",
+      "src": "assets/img/mahawiki.png",
       "sizes": "100x100",
-      "type": "image/jpg"
+      "type": "image/png"
     }
   ]
 }

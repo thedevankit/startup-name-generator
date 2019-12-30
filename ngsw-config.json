@@ -1,38 +1,29 @@
 {
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
   "index": "/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
-      "updateMode": "prefetch",
-      "files": [
-        "/favicon.ico",
-        "/index.html",
-        "/main-es2015.7a24f445ed8ebd28daee.js",
-        "/main-es5.7a24f445ed8ebd28daee.js",
-        "/manifest.webmanifest",
-        "/polyfills-es2015.2987770fde9daa1d8a2e.js",
-        "/polyfills-es5.6696c533341b95a3d617.js",
-        "/runtime-es2015.edb2fcf2778e7bf1d426.js",
-        "/runtime-es5.edb2fcf2778e7bf1d426.js",
-        "/scripts.fa7bba8ab8ba3c91b800.js",
-        "/styles.ece6e900335fe1afe181.css"
-      ],
-      "patterns": []
-    },
-    {
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    }, {
       "name": "assets",
-      "installMode": "prefetch",
+      "installMode": "lazy",
       "updateMode": "prefetch",
-      "resources":{
-      "files": [
-      "/assets/fonts/Thrones.ttf",
-      "/assets/icons/newlogo.jpg",
-      "/assets/img/mahawiki.png",
-      "/assets/js/startup-name-generator.js"
-    ]
-      },
-      "patterns": []
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
+      }
     }
   ]
 }
